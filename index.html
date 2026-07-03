@@ -15,6 +15,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Improved download button styles */
+        .download-btns{display:flex;justify-content:center;margin-top:18px}
+        .btn-descarga{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;background:linear-gradient(90deg,#0066ff 0%,#00c6ff 100%);color:#fff;text-decoration:none;border-radius:12px;box-shadow:0 8px 30px rgba(0,102,255,0.18);transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease;font-weight:600}
+        .btn-descarga i{font-size:1.1rem}
+        .btn-descarga span{letter-spacing:0.6px}
+        .btn-descarga:active{transform:translateY(1px)}
+        .btn-descarga:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,102,255,0.22);opacity:0.98}
+        .btn-descarga:focus{outline:3px solid rgba(0,198,255,0.18);outline-offset:4px}
+        @media (max-width:480px){.btn-descarga{padding:12px 16px;border-radius:10px}}
+    </style>
 </head>
 <body>
 
@@ -26,6 +37,8 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#funciones">Características</a></li>
                     <li><a href="#descarga" class="btn-small">Descargar</a></li>
+                    <li><a href="ficha-tecnica.html" class="btn-small">Ficha Tecnica</a></li>
+                    <li><a href="#donar" class="btn-small">Donar</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle" id="mobile-menu">
@@ -48,7 +61,7 @@
                 </div>
             </div>
             <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
-                <img src="imagenes/logo.png" alt="Bilinguify App Interface" class="floating app-mockup">
+                <img src="/imagenes/logo.png" alt="Bilinguify App Interface" class="floating app-mockup">
             </div>
         </div>
     </section>
@@ -85,15 +98,15 @@
 
             <div class="gallery" data-aos="zoom-in" data-aos-duration="200">
                 <figure class="thumb">
-                    <img src="imagenes/imagen1.jpg" alt="Pantalla principal" data-large="imagenes/imagen1.jpg">
+                    <img src="/imagenes/imagen1.jpg" alt="Pantalla principal" data-large="/imagenes/imagen1.jpg">
                     <figcaption>Pantalla principal optimizada para una traducción rápida a un solo toque.</figcaption>
                 </figure>
                 <figure class="thumb">
-                    <img src="imagenes/imagen2.jpg" alt="Traducciones recientes" data-large="imagenes/imagen2.jpg">
+                    <img src="/imagenes/imagen2.jpg" alt="Traducciones recientes" data-large="/imagenes/imagen2.jpg">
                     <figcaption>Accede fácilmente a tus traducciones recientes y guarda frases recurrentes.</figcaption>
                 </figure>
                 <figure class="thumb">
-                    <img src="imagenes/imagen3.jpg" alt="Reconocimiento OCR" data-large="imagenes/imagen3.jpg">
+                    <img src="/imagenes/imagen3.jpg" alt="Reconocimiento OCR" data-large="/imagenes/imagen3.jpg">
                     <figcaption>Reconocimiento óptico de caracteres de alta precisión en más idiomas.</figcaption>
                 </figure>
             </div>
@@ -180,17 +193,270 @@
             <h2>¿Listo para hablar cualquier idioma?</h2>
             <p>Descarga Bilinguify de forma gratuita y experimenta una comunicación verdaderamente global.</p>
             <div class="download-btns">
-                <a href="#" class="btn-store ripple">
-                    <i class="fab fa-apple"></i>
-                    <span>App Store</span>
-                </a>
-                <a href="#" class="btn-store ripple">
-                    <i class="fab fa-google-play"></i>
-                    <span>Google Play</span>
+                <a href="#" class="btn-descarga">
+                    <i class="fas fa-download"></i>
+                    <span>DESCARGAR</span>
                 </a>
             </div>
         </div>
     </section>
+
+    <!-- ==========================================
+     SECCIÓN: COLABORACIÓN Y SOPORTE (DONAR)
+     ========================================== -->
+<section id="donar" class="support-section">
+    <div class="container">
+        <div class="support-wrapper" data-aos="zoom-in">
+            
+            <!-- Mensaje Emocional de Desarrollador Solo -->
+            <div class="support-content">
+                <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                <h2>Detrás de cada línea de código...</h2>
+                <p class="emotional-text">
+                    <strong>Bilinguify</strong> no nació en una gran oficina corporativa ni cuenta con millones de dólares en presupuesto. Nació de la pasión de un <strong>único desarrollador independiente</strong> que cree firmemente en crear herramientas libres de publicidad, rápidas y que respeten tu privacidad.
+                </p>
+                <p class="emotional-text sub">
+                    Mantener este proyecto vivo, optimizar los motores de traducción local y pasar madrugadas enteras puliendo detalles requiere de incontables horas (y mucho café). Si esta aplicación te ha sido de utilidad, considera apoyarme. Tu colaboración es el motor real que me permite seguir programando en solitario. ¡Cada grano de arena cuenta!
+                </p>
+            </div>
+
+            <!-- Botones de Pago / Colaboración -->
+            <div class="payment-methods">
+                
+                <!-- Botón PayPal -->
+                <a href="https://www.paypal.me/TU_USUARIO" target="_blank" class="pay-card paypal-card">
+                    <div class="pay-icon"><i class="fab fa-paypal"></i></div>
+                    <div class="pay-info">
+                        <h3>Donar con PayPal</h3>
+                        <p>Apoya mediante tarjeta de crédito o saldo de forma rápida y segura.</p>
+                    </div>
+                    <span class="pay-btn">Enviar apoyo <i class="fas fa-external-link-alt"></i></span>
+                </a>
+
+                <!-- Botón Binance (Interactivo con Copiado de ID) -->
+                <div class="pay-card binance-card" onclick="copiarBinanceID()">
+                    <div class="pay-icon">
+                        <!-- SVG del logo de Binance para máxima definición -->
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="#f3ba2f">
+                            <path d="M12.004 0L3.729 4.777l4.135 2.389L12.004 4.78l4.137 2.386 4.132-2.389L12.004 0zM3.724 9.553l4.14 2.387-4.14 2.389V9.553zm16.56 0v4.776l-4.134-2.389 4.134-2.387zM12.004 9.563l4.135 2.387-4.135 2.39-4.138-2.39 4.138-2.387zm-4.14 7.163l4.14 2.386 4.135-2.386 4.132 2.389-8.267 4.777-8.275-4.777 4.135-2.389z"/>
+                        </svg>
+                    </div>
+                    <div class="pay-info">
+                        <h3>Donar con Binance Pay</h3>
+                        <p>Haz tu micro-donación en criptomonedas (USDT/BTC) sin comisiones.</p>
+                        <!-- Reemplaza este número por tu ID real de Binance Pay -->
+                        <span class="binance-id" id="binanceIdText">Binance Pay ID: <strong>123456789</strong></span>
+                    </div>
+                    <span class="pay-btn" id="btnCopiarText"><i class="fas fa-copy"></i> Copiar ID</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ESTILOS CSS ADAPTADOS A TU FONDO NEGRO Y ACENTOS AZULES -->
+<style>
+    :root {
+        --bg-black: #000000;
+        --card-dark: #0b0f19;
+        --border-color: #1e293b;
+        --blue-primary: #0056d2;
+        --blue-glow: rgba(0, 86, 210, 0.25);
+        --text-white: #ffffff;
+        --text-slate: #94a3b8;
+    }
+
+    .support-section {
+        background-color: var(--bg-black);
+        padding: 90px 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .support-wrapper {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 50px;
+        background: var(--card-dark);
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        padding: 50px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 86, 210, 0.05);
+    }
+
+    .support-content {
+        text-align: left;
+    }
+
+    .support-content .heart-icon {
+        font-size: 2rem;
+        color: #ef4444; /* Rojo latido para la emoción */
+        margin-bottom: 15px;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .support-content h2 {
+        color: var(--text-white);
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .emotional-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #e2e8f0;
+        margin-bottom: 15px;
+    }
+
+    .emotional-text.sub {
+        font-size: 0.95rem;
+        color: var(--text-slate);
+    }
+
+    .emotional-text strong {
+        color: #38bdf8; /* Celeste vibrante para resaltar palabras clave */
+    }
+
+    /* Columnas de Métodos de Pago */
+    .payment-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .pay-card {
+        background: #121826;
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pay-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .paypal-card:hover {
+        border-color: #0070ba;
+        box-shadow: 0 10px 25px rgba(0, 112, 186, 0.2);
+    }
+
+    .binance-card:hover {
+        border-color: #f3ba2f;
+        box-shadow: 0 10px 25px rgba(243, 186, 47, 0.15);
+    }
+
+    .pay-icon {
+        font-size: 2rem;
+    }
+    
+    .paypal-card .pay-icon {
+        color: #0070ba;
+    }
+
+    .pay-info h3 {
+        color: var(--text-white);
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .pay-info p {
+        color: var(--text-slate);
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .binance-id {
+        display: inline-block;
+        margin-top: 8px;
+        background: rgba(243, 186, 47, 0.1);
+        color: #f3ba2f;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-family: monospace;
+        border: 1px dashed rgba(243, 186, 47, 0.3);
+    }
+
+    .pay-btn {
+        align-self: flex-start;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-white);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 8px 16px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 5px;
+        transition: background 0.2s;
+    }
+
+    .paypal-card:hover .pay-btn {
+        background: #0070ba;
+    }
+
+    .binance-card:hover .pay-btn {
+        background: #f3ba2f;
+        color: #000;
+    }
+
+    /* Responsivo */
+    @media (max-width: 992px) {
+        .support-wrapper {
+            grid-template-columns: 1fr;
+            padding: 30px;
+            gap: 35px;
+        }
+        .support-content h2 {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+
+<!-- SCRIPT COMPACTO PARA EL COPIADO DE BINANCE ID -->
+<script>
+function copiarBinanceID() {
+    // Aquí pon tu ID de Binance real de 9 dígitos
+    const idBinance = "123456789"; 
+    
+    navigator.clipboard.writeText(idBinance).then(() => {
+        const btnText = document.getElementById('btnCopiarText');
+        const originalText = btnText.innerHTML;
+        
+        // Cambia el diseño temporalmente para avisar que se copió
+        btnText.innerHTML = '<i class="fas fa-check"></i> ¡Copiado con éxito!';
+        btnText.style.background = '#28a745';
+        btnText.style.color = '#ffffff';
+        
+        setTimeout(() => {
+            btnText.innerHTML = originalText;
+            btnText.style.background = '';
+            btnText.style.color = '';
+        }, 2500);
+    }).catch(err => {
+        console.error('Error al copiar el ID: ', err);
+    });
+}
+</script>
 
     <footer class="footer">
         <div class="container">

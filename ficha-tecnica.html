@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilinguify - Ficha Técnica Oficial</title>
+    
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="imagenes/logo.png">
+
+    <!-- Fuentes e Íconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Animaciones AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tu archivo de estilos principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Correcciones de color óptimas para Fondo Negro -->
+    <style>
+        :root {
+            --primary-color: #0056d2;
+            --primary-glow: rgba(0, 86, 210, 0.3);
+            --bg-dark: #000000;
+            --surface-dark: #0b0f19; /* Gris azulado muy oscuro para tarjetas y tablas */
+            --surface-dark-alt: #121826; /* Alternado de filas */
+            --border-color: #1e293b;
+            --text-light: #ffffff;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        /* Modificación del Navbar en caso de heredar estilos claros */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.85) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .nav-links a {
+            color: var(--text-light) !important;
+        }
+
+        .tech-hero {
+            padding: 160px 0 60px 0;
+            /* Degradado sutil de azul oscuro a negro profundo */
+            background: linear-gradient(180deg, rgba(0, 86, 210, 0.15) 0%, rgba(0,0,0,0) 100%);
+            text-align: center;
+        }
+
+        .tech-hero .section-title {
+            color: var(--text-light);
+        }
+
+        .tech-hero p {
+            max-width: 750px;
+            margin: 20px auto 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .tech-section {
+            padding: 40px 0 80px 0;
+        }
+
+        .tech-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+
+        /* Estilos de la Tabla de Requisitos (Modo Oscuro) */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            background: var(--surface-dark);
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--primary-glow);
+            border: 1px solid var(--border-color);
+            margin-bottom: 60px;
+        }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 650px;
+        }
+
+        .tech-table th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 18px 24px;
+            font-weight: 600;
+            font-size: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .tech-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .tech-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tech-table tr:nth-child(even) {
+            background-color: var(--surface-dark-alt);
+        }
+
+        .tech-table tr:hover {
+            background-color: rgba(0, 86, 210, 0.08);
+        }
+
+        .tech-label {
+            font-weight: 600;
+            color: #38bdf8; /* Azul claro/celeste para mejorar legibilidad de etiquetas en fondo negro */
+            width: 25%;
+        }
+
+        .tech-recommended {
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        /* Ajustes para las Tarjetas de Funciones (Modo Oscuro) */
+        .tech-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .tech-card {
+            background: var(--surface-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 15px var(--primary-glow);
+        }
+
+        .tech-card h3 {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(0, 86, 210, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .tech-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-card li {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .tech-card li::before {
+            content: "•";
+            color: #38bdf8;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .tech-card li strong {
+            color: var(--text-light);
+        }
+
+        /* Clase Active para el botón del Header */
+        .nav-links .btn-small.active {
+            background-color: var(--primary-color) !important;
+            color: #ffffff !important;
+            border-color: var(--primary-color) !important;
+            box-shadow: 0 0 12px var(--primary-glow);
+        }
+
+        /* Ajuste de Footer */
+        .footer {
+            background-color: #05070c !important;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted) !important;
+        }
+
+        @media (max-width: 768px) {
+            .tech-hero {
+                padding: 120px 0 40px 0;
+            }
+            .tech-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER CONFIGURADO PARA NAVEGACIÓN INTERNA -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Bilingui<span class="accent">fy</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#funciones">Características</a></li>
+                    <li><a href="index.html#descarga" class="btn-small">Descargar</a></li>
+                    <li><a href="ficha-tecnica.html" class="btn-small active">Ficha Técnica</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTRODUCCIÓN DE LA FICHA TÉCNICA -->
+    <section class="tech-hero">
+        <div class="container">
+            <h1 class="section-title" data-aos="fade-up">🚀 Bilinguify: Ficha Técnica Oficial</h1>
+            <p data-aos="fade-up" data-aos-delay="100">
+                Bilinguify es una herramienta de comunicación universal diseñada para funcionar en entornos críticos, sin necesidad de conexión constante a internet, priorizando la privacidad y la velocidad de procesamiento local.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTENIDO TÉCNICO ESPECÍFICO -->
+    <section class="tech-section">
+        <div class="container">
+            
+            <!-- SUBSECCIÓN: REQUISITOS -->
+            <h2 class="tech-subtitle" data-aos="fade-up"><i class="fas fa-microchip" style="color: #38bdf8;"></i>📋 Requisitos del Sistema</h2>
+            
+            <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Especificación Mínima</th>
+                            <th>Recomendado (Experiencia Pro)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tech-label">Sistema Operativo</td>
+                            <td>Android 8.0 (Oreo) - API 26</td>
+                            <td class="tech-recommended">Android 11.0 o superior</td>
+                        </tr>
+                        <tr>
+                            <td class="tech-label">Memoria RAM</td>
+                            <td>3 GB</td>
+                            <td class="tech-recommended">4 GB a 6 GB (Para carga instantánea)</td>
+                        </tr>
+                        <tr>
+                            <td class="tech-label">Procesador (CPU)</td>
+                            <td>Quad-Core 1.8 GHz</td>
+                            <td class="tech-recommended">Octa-Core 2.0 GHz+ (Snapdragon 600+)</td>
+                        </tr>
+                        <tr>
+                            <td class="tech-label">Almacenamiento</td>
+                            <td>200 MB (Base)</td>
+                            <td class="tech-recommended">1 GB libre (Para múltiples idiomas)</td>
+                        </tr>
+                        <tr>
+                            <td class="tech-label">Pantalla</td>
+                            <td>5.0" HD (720p)</td>
+                            <td class="tech-recommended">6.0" Full HD+ (AMOLED)</td>
+                        </tr>
+                        <tr>
+                            <td class="tech-label">Conectividad</td>
+                            <td>Internet (solo para descarga inicial)</td>
+                            <td class="tech-recommended" style="color: #4ade80;">100% Offline tras configuración</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- SUBSECCIÓN: FUNCIONES -->
+            <h2 class="tech-subtitle" data-aos="fade-up"><i class="fas fa-layer-group" style="color: #38bdf8;"></i>🛠️ Funciones Principales</h2>
+            
+            <div class="tech-features-grid">
+                
+                <!-- Tarjeta 1 -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>1. 🎤 Traducción de Voz a Voz (Modo Hablar)</h3>
+                    <ul>
+                        <li><strong>Reconocimiento Offline:</strong> Transcripción de audio a texto en tiempo real sin enviar datos a la nube (Vosk Engine).</li>
+                        <li><strong>Traducción Instantánea:</strong> Convierte tu voz a más de 10 idiomas de forma local.</li>
+                        <li><strong>Voz Nativa (TTS):</strong> Reproduce la traducción con acento natural del idioma destino.</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>2. 📸 Traducción con Cámara (Modo Visión)</h3>
+                    <ul>
+                        <li><strong>Modo Letrero:</strong> Enfoca y traduce instantáneamente avisos, menús o señales en la calle.</li>
+                        <li><strong>Modo Documento:</strong> Captura textos largos, párrafos completos o páginas de libros para traducirlos en un solo bloque procesado.</li>
+                        <li><strong>OCR de Alta Precisión:</strong> Reconocimiento de caracteres incluso en condiciones de baja luz.</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>3. ⌨️ Traducción de Texto Manual</h3>
+                    <ul>
+                        <li><strong>Copia y Pega:</strong> Botones rápidos para integrar textos de otras aplicaciones.</li>
+                        <li><strong>Escucha de Resultados:</strong> Opción para reproducir cualquier texto escrito.</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>4. 📂 Tienda de Idiomas Inteligente</h3>
+                    <ul>
+                        <li><strong>Descarga Selectiva:</strong> Baja solo los idiomas que necesitas para ahorrar espacio en tu Xiaomi.</li>
+                        <li><strong>Instalación "Turbo":</strong> Sistema de extracción optimizado para procesadores de múltiples núcleos.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bilinguify. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Inicialización de las animaciones al hacer scroll
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Script para asegurar el funcionamiento del menú móvil en esta subpágina
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if(mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
