@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilinguify - Rompe las barreras del idioma</title>
+    
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="imagenes/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2 family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Improved download button styles */
+        .download-btns{display:flex;justify-content:center;margin-top:18px}
+        .btn-descarga{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;background:linear-gradient(90deg,#0066ff 0%,#00c6ff 100%);color:#fff;text-decoration:none;border-radius:12px;box-shadow:0 8px 30px rgba(0,102,255,0.18);transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease;font-weight:600}
+        .btn-descarga i{font-size:1.1rem}
+        .btn-descarga span{letter-spacing:0.6px}
+        .btn-descarga:active{transform:translateY(1px)}
+        .btn-descarga:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,102,255,0.22);opacity:0.98}
+        .btn-descarga:focus{outline:3px solid rgba(0,198,255,0.18);outline-offset:4px}
+        @media (max-width:480px){.btn-descarga{padding:12px 16px;border-radius:10px}}
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Bilingui<span class="accent">fy</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#funciones">Características</a></li>
+                    <li><a href="#descarga" class="btn-small">Descargar</a></li>
+                    <li><a href="ficha-tecnica.html" class="btn-small">Ficha Tecnica</a></li>
+                    <li><a href="#donar" class="btn-small">Donar</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="parallax-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <h1>Traduce el mundo en tiempo real</h1>
+                <p>Bilinguify combina traducción de voz instantánea, reconocimiento de cámara inteligente y la interfaz más fluida para que nunca te quedes sin palabras.</p>
+                <div class="hero-btns">
+                    <a href="#descarga" class="btn-primary ripple"><i class="fas fa-download"></i> Obtener App</a>
+                    <a href="#demo" class="btn-secondary"><i class="fas fa-play"></i> Ver Cómo Funciona</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                <img src="/imagenes/logo.png" alt="Bilinguify App Interface" class="floating app-mockup">
+            </div>
+        </div>
+    </section>
+
+    <section id="funciones" class="features-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Comunicación Sin Límites</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Explora las potentes herramientas integradas en Bilinguify.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="icon-box"><i class="fas fa-microphone"></i></div>
+                    <h3>Comenzar a Hablar</h3>
+                    <p>Traducción de voz bidireccional instantánea. Habla de forma natural y deja que Bilinguify haga el resto.</p>
+                </div>
+                <div class="feature-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="icon-box"><i class="fas fa-camera"></i></div>
+                    <h3>Traducción por Cámara</h3>
+                    <p>Apunta a carteles, menús o documentos y obtén una traducción clara superpuesta al instante.</p>
+                </div>
+                <div class="feature-card" data-aos="flip-left" data-aos-delay="600">
+                    <div class="icon-box"><i class="fas fa-download"></i></div>
+                    <h3>Modo Offline</h3>
+                    <p>Descarga paquetes de idiomas completos para traducir con total precisión incluso sin conexión a internet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="capturas" class="screenshot-section">
+        <div class="parallax-bg-2"></div>
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Una Interfaz Limpia y Profesional</h2>
+            <p class="section-subtitle" data-aos="fade-up">Diseñada minuciosamente para ofrecer la mejor experiencia de usuario.</p>
+
+            <div class="gallery" data-aos="zoom-in" data-aos-duration="200">
+                <figure class="thumb">
+                    <img src="/imagenes/imagen1.jpg" alt="Pantalla principal" data-large="/imagenes/imagen1.jpg">
+                    <figcaption>Pantalla principal optimizada para una traducción rápida a un solo toque.</figcaption>
+                </figure>
+                <figure class="thumb">
+                    <img src="/imagenes/imagen2.jpg" alt="Traducciones recientes" data-large="/imagenes/imagen2.jpg">
+                    <figcaption>Accede fácilmente a tus traducciones recientes y guarda frases recurrentes.</figcaption>
+                </figure>
+                <figure class="thumb">
+                    <img src="/imagenes/imagen3.jpg" alt="Reconocimiento OCR" data-large="/imagenes/imagen3.jpg">
+                    <figcaption>Reconocimiento óptico de caracteres de alta precisión en más idiomas.</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Lightbox / Modal -->
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+            <button class="lb-close" aria-label="Cerrar">&times;</button>
+            <img id="lightbox-img" src="" alt="">
+        </div>
+
+        <style>
+            .gallery{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:30px 0}
+            .thumb{width:320px;max-width:32%;min-width:220px;text-align:center}
+            .thumb img{width:100%;height:auto;border-radius:12px;display:block;cursor:zoom-in;transition:transform .25s ease, box-shadow .25s ease}
+            .thumb img:hover{transform:scale(1.06);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+            .thumb figcaption{margin-top:10px;font-size:0.95rem;color:#666}
+            @media (max-width:900px){ .thumb{max-width:45%} }
+            @media (max-width:600px){ .thumb{max-width:100%} }
+
+            .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:9999;padding:20px}
+            .lightbox.show{display:flex}
+            .lightbox img{max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+            .lb-close{position:absolute;top:18px;right:18px;background:transparent;border:none;color:#fff;font-size:2.2rem;cursor:pointer;padding:6px;line-height:1}
+        </style>
+
+        <script>
+            (function(){
+                const thumbs = document.querySelectorAll('#capturas .thumb img');
+                const lb = document.getElementById('lightbox');
+                const lbImg = document.getElementById('lightbox-img');
+                const lbClose = document.querySelector('.lb-close');
+
+                function open(src, alt){
+                    lbImg.src = src;
+                    lbImg.alt = alt || '';
+                    lb.classList.add('show');
+                    lb.setAttribute('aria-hidden','false');
+                    document.body.style.overflow = 'hidden';
+                }
+                function close(){
+                    lb.classList.remove('show');
+                    lb.setAttribute('aria-hidden','true');
+                    lbImg.src = '';
+                    document.body.style.overflow = '';
+                }
+
+                thumbs.forEach(img=>{
+                    // hover already handled by CSS; click opens lightbox
+                    img.addEventListener('click', ()=> open(img.dataset.large || img.src, img.alt));
+                    // allow focus + Enter to open
+                    img.tabIndex = 0;
+                    img.addEventListener('keydown', e=>{ if(e.key === 'Enter') open(img.dataset.large || img.src, img.alt); });
+                });
+
+                lbClose.addEventListener('click', close);
+                lb.addEventListener('click', e=>{
+                    if(e.target === lb) close(); // click outside image
+                });
+                document.addEventListener('keydown', e=>{ if(e.key === 'Escape') close(); });
+            })();
+        </script>
+    </section>
+
+    <section id="demo" class="video-section">
+        <div class="container">
+            <div class="video-content-wrapper">
+                <div class="video-text" data-aos="fade-right">
+                    <h2>Mira Bilinguify en Acción</h2>
+                    <p>Descubre en este video demostrativo cómo Bilinguify procesa la voz en tiempo real, ofreciendo traducciones precisas con una latencia casi nula. El compañero de viaje y negocios definitivo.</p>
+                </div>
+                <div class="video-player-container" data-aos="fade-left">
+                    <video controls poster="https://via.placeholder.com/640x360/0056d2/fff?text=Reproducir+Demo+Bilinguify">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="descarga" class="download-section">
+        <div class="container text-center" data-aos="zoom-out">
+            <h2>¿Listo para hablar cualquier idioma?</h2>
+            <p>Descarga Bilinguify de forma gratuita y experimenta una comunicación verdaderamente global.</p>
+            <div class="download-btns">
+                <a href="#" class="btn-descarga">
+                    <i class="fas fa-download"></i>
+                    <span>DESCARGAR</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+     SECCIÓN: COLABORACIÓN Y SOPORTE (DONAR)
+     ========================================== -->
+<section id="donar" class="support-section">
+    <div class="container">
+        <div class="support-wrapper" data-aos="zoom-in">
+            
+            <!-- Mensaje Emocional de Desarrollador Solo -->
+            <div class="support-content">
+                <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                <h2>Detrás de cada línea de código...</h2>
+                <p class="emotional-text">
+                    <strong>Bilinguify</strong> no nació en una gran oficina corporativa ni cuenta con millones de dólares en presupuesto. Nació de la pasión de un <strong>único desarrollador independiente</strong> que cree firmemente en crear herramientas libres de publicidad, rápidas y que respeten tu privacidad.
+                </p>
+                <p class="emotional-text sub">
+                    Mantener este proyecto vivo, optimizar los motores de traducción local y pasar madrugadas enteras puliendo detalles requiere de incontables horas (y mucho café). Si esta aplicación te ha sido de utilidad, considera apoyarme. Tu colaboración es el motor real que me permite seguir programando en solitario. ¡Cada grano de arena cuenta!
+                </p>
+            </div>
+
+            <!-- Botones de Pago / Colaboración -->
+            <div class="payment-methods">
+                
+                <!-- Botón PayPal -->
+                <a href="https://www.paypal.me/TU_USUARIO" target="_blank" class="pay-card paypal-card">
+                    <div class="pay-icon"><i class="fab fa-paypal"></i></div>
+                    <div class="pay-info">
+                        <h3>Donar con PayPal</h3>
+                        <p>Apoya mediante tarjeta de crédito o saldo de forma rápida y segura.</p>
+                    </div>
+                    <span class="pay-btn">Enviar apoyo <i class="fas fa-external-link-alt"></i></span>
+                </a>
+
+                <!-- Botón Binance (Interactivo con Copiado de ID) -->
+                <div class="pay-card binance-card" onclick="copiarBinanceID()">
+                    <div class="pay-icon">
+                        <!-- SVG del logo de Binance para máxima definición -->
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="#f3ba2f">
+                            <path d="M12.004 0L3.729 4.777l4.135 2.389L12.004 4.78l4.137 2.386 4.132-2.389L12.004 0zM3.724 9.553l4.14 2.387-4.14 2.389V9.553zm16.56 0v4.776l-4.134-2.389 4.134-2.387zM12.004 9.563l4.135 2.387-4.135 2.39-4.138-2.39 4.138-2.387zm-4.14 7.163l4.14 2.386 4.135-2.386 4.132 2.389-8.267 4.777-8.275-4.777 4.135-2.389z"/>
+                        </svg>
+                    </div>
+                    <div class="pay-info">
+                        <h3>Donar con Binance Pay</h3>
+                        <p>Haz tu micro-donación en criptomonedas (USDT/BTC) sin comisiones.</p>
+                        <!-- Reemplaza este número por tu ID real de Binance Pay -->
+                        <span class="binance-id" id="binanceIdText">Binance Pay ID: <strong>123456789</strong></span>
+                    </div>
+                    <span class="pay-btn" id="btnCopiarText"><i class="fas fa-copy"></i> Copiar ID</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ESTILOS CSS ADAPTADOS A TU FONDO NEGRO Y ACENTOS AZULES -->
+<style>
+    :root {
+        --bg-black: #000000;
+        --card-dark: #0b0f19;
+        --border-color: #1e293b;
+        --blue-primary: #0056d2;
+        --blue-glow: rgba(0, 86, 210, 0.25);
+        --text-white: #ffffff;
+        --text-slate: #94a3b8;
+    }
+
+    .support-section {
+        background-color: var(--bg-black);
+        padding: 90px 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .support-wrapper {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 50px;
+        background: var(--card-dark);
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        padding: 50px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 86, 210, 0.05);
+    }
+
+    .support-content {
+        text-align: left;
+    }
+
+    .support-content .heart-icon {
+        font-size: 2rem;
+        color: #ef4444; /* Rojo latido para la emoción */
+        margin-bottom: 15px;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .support-content h2 {
+        color: var(--text-white);
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .emotional-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #e2e8f0;
+        margin-bottom: 15px;
+    }
+
+    .emotional-text.sub {
+        font-size: 0.95rem;
+        color: var(--text-slate);
+    }
+
+    .emotional-text strong {
+        color: #38bdf8; /* Celeste vibrante para resaltar palabras clave */
+    }
+
+    /* Columnas de Métodos de Pago */
+    .payment-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .pay-card {
+        background: #121826;
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pay-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .paypal-card:hover {
+        border-color: #0070ba;
+        box-shadow: 0 10px 25px rgba(0, 112, 186, 0.2);
+    }
+
+    .binance-card:hover {
+        border-color: #f3ba2f;
+        box-shadow: 0 10px 25px rgba(243, 186, 47, 0.15);
+    }
+
+    .pay-icon {
+        font-size: 2rem;
+    }
+    
+    .paypal-card .pay-icon {
+        color: #0070ba;
+    }
+
+    .pay-info h3 {
+        color: var(--text-white);
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .pay-info p {
+        color: var(--text-slate);
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .binance-id {
+        display: inline-block;
+        margin-top: 8px;
+        background: rgba(243, 186, 47, 0.1);
+        color: #f3ba2f;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-family: monospace;
+        border: 1px dashed rgba(243, 186, 47, 0.3);
+    }
+
+    .pay-btn {
+        align-self: flex-start;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-white);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 8px 16px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 5px;
+        transition: background 0.2s;
+    }
+
+    .paypal-card:hover .pay-btn {
+        background: #0070ba;
+    }
+
+    .binance-card:hover .pay-btn {
+        background: #f3ba2f;
+        color: #000;
+    }
+
+    /* Responsivo */
+    @media (max-width: 992px) {
+        .support-wrapper {
+            grid-template-columns: 1fr;
+            padding: 30px;
+            gap: 35px;
+        }
+        .support-content h2 {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+
+<!-- SCRIPT COMPACTO PARA EL COPIADO DE BINANCE ID -->
+<script>
+function copiarBinanceID() {
+    // Aquí pon tu ID de Binance real de 9 dígitos
+    const idBinance = "123456789"; 
+    
+    navigator.clipboard.writeText(idBinance).then(() => {
+        const btnText = document.getElementById('btnCopiarText');
+        const originalText = btnText.innerHTML;
+        
+        // Cambia el diseño temporalmente para avisar que se copió
+        btnText.innerHTML = '<i class="fas fa-check"></i> ¡Copiado con éxito!';
+        btnText.style.background = '#28a745';
+        btnText.style.color = '#ffffff';
+        
+        setTimeout(() => {
+            btnText.innerHTML = originalText;
+            btnText.style.background = '';
+            btnText.style.color = '';
+        }, 2500);
+    }).catch(err => {
+        console.error('Error al copiar el ID: ', err);
+    });
+}
+</script>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bilinguify. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
