@@ -457,6 +457,24 @@ function copiarBinanceID() {
     });
 }
 </script>
+    <script src="script.js"></script>
+    <script>
+        // Inicialización de las animaciones al hacer scroll
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+// Script corregido para asegurar consistencia con el CSS global
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+if(mobileMenu && navLinks) {
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('toggle');      // Activa la animación X de las barras
+        navLinks.classList.toggle('nav-active');    // Desplaza el menú desde la derecha
+    });
+}
+    </script>
 
     <footer class="footer">
         <div class="container">
