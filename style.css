@@ -317,3 +317,100 @@ img { max-width: 100%; height: auto; }
     .toggle .bar:nth-child(2) { opacity: 0; }
     .toggle .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
 }
+
+/* ==========================================================================
+   OPTIMIZACIÓN MÓVIL PROFESIONAL (COMPLETAMENTE ADAPTADO PARA CELULARES)
+   ========================================================================== */
+
+/* Clases de Control de Visibilidad Condicional */
+@media (min-width: 769px) {
+    .only-mobile { display: none !important; }
+}
+
+@media (max-width: 768px) {
+    .only-desktop { display: none !important; }
+    
+    /* Navbar móvil mejorada con efecto Blur Premium */
+    .navbar {
+        height: 70px !important;
+        background-color: rgba(10, 14, 23, 0.92) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 70px;
+        height: calc(100vh - 70px);
+        background-color: rgba(10, 14, 23, 0.98);
+        display: flex;
+        flex-direction: column;
+        width: 75%; /* Ajuste de ancho para mejor ergonomía */
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 40px 20px;
+        gap: 25px;
+        border-left: 1px solid rgba(0, 86, 210, 0.2);
+    }
+    
+    /* Clase activa para desplegar el menú */
+    .nav-links.nav-active, .nav-links.active { 
+        transform: translateX(0) !important; 
+    }
+
+    .nav-links li { width: 100%; text-align: center; }
+    .nav-links .btn-small { display: block; width: 100%; padding: 12px; }
+
+    /* Ajuste de Hero Section en Celulares */
+    .hero-section { height: auto; padding: 120px 0 60px 0; }
+    .hero-content { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 35px;
+    }
+    .hero-image { order: -1; } /* El logo/mockup sube para enganchar visualmente */
+    
+    .hero-text h1 { 
+        font-size: 2.3rem !important; /* Evita saltos de línea huérfanos */
+        line-height: 1.2;
+    }
+    .hero-text p { font-size: 1rem; margin-bottom: 25px; }
+    .hero-btns { flex-direction: column; gap: 15px; width: 100%; }
+    .hero-btns .btn-primary, .hero-btns .btn-secondary { width: 100%; text-align: center; }
+
+    /* Características y Grillas */
+    .features-section, .screenshot-section, .video-section, .support-section { 
+        padding: 60px 0; 
+    }
+    .section-title { font-size: 1.9rem !important; }
+    .features-grid { gap: 20px; }
+    .feature-card { padding: 30px 20px; }
+
+    /* Galería de capturas */
+    .gallery { gap: 15px; }
+    .thumb { max-width: 100% !important; width: 100%; }
+
+    /* Sección de Video Demo */
+    .video-content-wrapper { grid-template-columns: 1fr; text-align: center; gap: 25px; }
+    .video-text h2 { font-size: 1.8rem; }
+
+    /* Sección de Soporte / Donaciones (#donar) */
+    .support-wrapper {
+        grid-template-columns: 1fr !important;
+        padding: 25px 20px !important; /* Adiós al padding excesivo de 50px */
+        gap: 30px;
+    }
+    .support-content h2 { font-size: 1.6rem; text-align: center; }
+    .support-content .heart-icon { text-align: center; }
+    .emotional-text { font-size: 0.95rem; text-align: justify; }
+    .pay-card { padding: 20px; }
+    .pay-btn { width: 100%; justify-content: center; }
+}
+
+/* Ajustes finos para pantallas muy pequeñas (Ej: iPhone SE, Xiaomi pequeños) */
+@media (max-width: 480px) {
+    .hero-text h1 { font-size: 1.9rem !important; }
+    .section-title { font-size: 1.6rem !important; }
+    .btn-descarga { width: 100%; justify-content: center; }
+}
