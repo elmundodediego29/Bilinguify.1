@@ -372,17 +372,16 @@
             duration: 800,
             once: true
         });
+// Script corregido para asegurar consistencia con el CSS global
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
 
-        // Script para asegurar el funcionamiento del menú móvil en esta subpágina
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        if(mobileMenu) {
-            mobileMenu.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-        }
+if(mobileMenu && navLinks) {
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('toggle');      // Activa la animación X de las barras
+        navLinks.classList.toggle('nav-active');    // Desplaza el menú desde la derecha
+    });
+}
     </script>
 </body>
 </html>
